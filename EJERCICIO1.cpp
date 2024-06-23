@@ -9,20 +9,27 @@ resultado del área calculada. */
 
 using namespace std;
 
+double area(int r){
+	double pi=M_PI;
+	return pi*pow(r,2);
+}
+
 int main(){
 	
 	SetConsoleOutputCP(CP_UTF8);
 	
-	 float radio,area;
-	 double pi;
-	 pi=M_PI;
+	 double radio,Area;
+	 
 	 cout<<"INGRESE EL RADIO DEL CÍRCULO: "<<endl;
 	 cin>>radio;
-	 area=	pi*pow(radio,2);
-	 
+	 while(radio<0){
+	 	cout<<"ERROR\nINGRESE EL VALOR DEL RADIO CORRECTO: "<<endl;
+	 	cin>>radio;
+	 }
+	 Area=area(radio);
 	 system("cls");
 	 
-	cout<<"EL ÁREA DEL CÍRCULO ES: " <<area<<endl;
+	cout<<"EL ÁREA DEL CÍRCULO ES: " <<Area<<endl;
 	
 	return 0;
 }
