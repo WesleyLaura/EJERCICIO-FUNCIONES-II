@@ -14,19 +14,16 @@ using namespace std;
  	int nummaximo, cantidad;
  	srand(time(0)); // Inicializa el generador de números aleatorios
  	
+ 	cout<<"INGRESE LA CANTIDAD DE NÚMEROS QUE DESEA GENERAR: "<<endl;
+ 	cin>>cantidad;
  	cout<<"INGRESE EL NÚMERO MÁXIMO: "<<endl;
  	cin>>nummaximo;
  	
- 	cout<<"INGRESE LA CANTIDAD DE NÚMEROS QUE DESEA GENERAR: "<<endl;
- 	cin>>cantidad;
- 	while (cantidad>nummaximo){
- 		cout<<"ERROR\nINGRESE UN VALOR ENTRE EL RANGO PERMITIDO: "<<endl;
- 		cin>>cantidad;
-	 }
+	
  	cout<<"LOS NÚMERO GENERADOS SON :"<<endl;
  	for(int i=0;i<cantidad;i++){
- 		int numeroMagico = rand()%nummaximo;
- 		cout<<numeroMagico<<endl;
+ 		int numeroMagico = rand()%(nummaximo+1);
+ 		cout<<numeroMagico<<" ";
 	 }
  	
  	return 0;
